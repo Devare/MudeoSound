@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_audio_media_player"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="mx.com.devare.mudeosound.AudioMediaPlayer">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_weight=".5"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/fondo_audioplayer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="-50dp"
+        android:background="#7b111111"
+        android:paddingBottom="16dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp">
+
+        <ImageButton
+            style="?attr/buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_volume_up" />
+
+        <ImageButton
+            style="?attr/buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_equalizer" />
+
+        <ImageButton
+            style="?attr/buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_content_cut" />
+
+        <ImageButton
+            style="?attr/buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/content_description"
+            app:srcCompat="@drawable/ic_queue_music" />
+
+        <ImageButton
+            style="?attr/buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_more_horiz" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".2"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_nombre_cancion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".9"
+            android:gravity="start"
+            android:text="Eminem Yourself"
+            android:textColor="@color/colorBlanco" />
+
+        <ImageButton
+            android:id="@+id/ibtn_aleatorio"
+            style="?attr/buttonBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight=".05"
+            android:contentDescription="@string/content_description"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_action_aleatorio" />
+
+        <ImageButton
+            android:id="@+id/ibtn_repetir"
+            style="?attr/buttonBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight=".05"
+            android:contentDescription="@string/content_description"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_action_repertir" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/sbar_progreso"
+        android:layout_width="match_parent"
+        android:layout_weight=".1"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:progress="50" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight=".2"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_tiempo_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="@color/colorBlanco" />
+
+        <ImageButton
+            android:id="@+id/ibtn_play"
+            style="?attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_action_play" />
+
+        <ImageButton
+            android:id="@+id/ibtn_pause"
+            style="?attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_action_pause" />
+
+        <ImageButton
+            android:id="@+id/ibtn_stop"
+            style="?attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_action_stop" />
+
+        <TextView
+            android:id="@+id/tv_tiempo_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="@color/colorBlanco" />
+    </LinearLayout>
+
+</LinearLayout>
